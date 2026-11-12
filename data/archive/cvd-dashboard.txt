@@ -1,0 +1,29 @@
+# Notes
+Brief
+- Before CVD pioneers fellowship in April
+- For South London Clinicians (GP level)
+
+References
+- NICE guidelines
+
+Requirements
+- Access to analysis on ePACT2 
+
+Data
+- Data queries
+- Data model, linking and additional columns e.g. region and country columns
+- Outside London row
+- Data management i.e. organisation in SharePoint
+
+Tableau
+- Filterable calculated fields with LOD i.e. labeling
+- Sheets i.e. axis and formatting
+- Dashboard assembly i.e. layout
+
+# Questions
+- What are identified patients on EPACT2
+- Is SGLT2i a count or a percentage?
+
+
+# Actions
+[x] Meeting with Natalie/Nathan

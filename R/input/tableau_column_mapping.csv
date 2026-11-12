@@ -1,0 +1,157 @@
+"sheet_name","tableau_relation","ordinal","csv_column_name","excel_column_name","legacy_hyper_column_name","tableau_internal_key","include_in_facts_xlsx"
+"Hyper data","Hyper data",0,"Partner Organisation Code (Hyper data)","Partner Organisation Code","Partner Organisation Code","[Partner Organisation Code (Hyper data)]",TRUE
+"Hyper data","Hyper data",1,"Partner Name (Hyper data)","Partner Name (Hyper data)","Partner Name","[Partner Name (Hyper data)]",TRUE
+"Hyper data","Hyper data",2,"ICB code","ICB code","ICB code","[ICB code]",TRUE
+"Hyper data","Hyper data",3,"ICB name","ICB name","ICB name","[ICB name]",TRUE
+"Hyper data","Hyper data",4,"PCN Code (Hyper data)","PCN Code (Hyper data)","PCN Code","[PCN Code (Hyper data)]",TRUE
+"Hyper data","Hyper data",5,"PCN Name (Hyper data)","PCN Name (Hyper data)","PCN Name","[PCN Name (Hyper data)]",TRUE
+"Hyper data","Hyper data",6,"South London","South London","South London","[South London]",TRUE
+"Hyper data","Hyper data",7,"England (Hyper data)","England (Hyper data)","England","[England]",TRUE
+"Hyper data","Hyper data",8,"BP002 (n)","BP002 (n)","BP002 (n)","[BP002 (n)]",TRUE
+"Hyper data","Hyper data",9,"BP002 (d)","BP002 (d)","BP002 (d)","[BP002 (d)]",TRUE
+"Hyper data","Hyper data",10,"Hypertension register 2023-24 (n)","Hypertension register 2023-24 (n)","Hypertension register 2023-24 (n)","[Hypertension register 2023-24 (n)]",TRUE
+"Hyper data","Hyper data",11,"Hypertension register 2023-24 (d)","Hypertension register 2023-24 (d)","Hypertension register 2023-24 (d)","[Hypertension register 2023-24 (d)]",TRUE
+"Hyper data","Hyper data",12,"HYP008 (n)","HYP008 (n)","HYP008 (n)","[HYP008 (n)]",TRUE
+"Hyper data","Hyper data",13,"HYP008 (d)","HYP008 (d)","HYP008 (d)","[HYP008 (d)]",TRUE
+"Hyper data","Hyper data",14,"HYP009 (n)","HYP009 (n)","HYP009 (n)","[HYP009 (n)]",TRUE
+"Hyper data","Hyper data",15,"HYP009 (d)","HYP009 (d)","HYP009 (d)","[HYP009 (d)]",TRUE
+"Hyper data","Hyper data",16,"hypertension prevalence estimates (n)","hypertension prevalence estimates (n)","Adult hypertension prevalence estimates, 2017 (n)","[Adult hypertension prevalence estimates, 2017 (n)]",TRUE
+"Hyper data","Hyper data",17,"hypertension prevalence estimates (d)","hypertension prevalence estimates (d)","Adult hypertension prevalence estimates, 2017 (d)","[Adult hypertension prevalence estimates, 2017 (d)]",TRUE
+"Hyper data","Hyper data",18,"CVDP007HYP  (n)","CVDP007HYP  (n)","CVDP007HYP  (n)","[CVDP007HYP  (n)]",TRUE
+"Hyper data","Hyper data",19,"CVDP007HYP  (d)","CVDP007HYP  (d)","CVDP007HYP  (d)","[CVDP007HYP  (d)]",TRUE
+"Hyper data","Hyper data",20,"Anti-hypertensives","Anti-hypertensives","Anti-hypertensives","[Anti-hypertensives]",TRUE
+"Hyper data","Hyper data",21,"List size (EPACT2)","List size (EPACT2)","List size (EPACT2)","[List size (EPACT2)]",TRUE
+"cholesterol","cholesterol",0,"Partner Organisation Code","Partner Organisation Code","Partner Organisation Code","[Partner Organisation Code]",TRUE
+"cholesterol","cholesterol",1,"General Practice","General Practice","Partner Name","[Partner Name]",TRUE
+"cholesterol","cholesterol",2,"ICB Loc Code","ICB Loc Code","Practice Parent Sub ICB Loc Code","[Practice Parent Sub ICB Loc Code]",TRUE
+"cholesterol","cholesterol",3,"Integrated Care Board","Integrated Care Board","Practice Parent Sub ICB Loc Name","[Practice Parent Sub ICB Loc Name]",TRUE
+"cholesterol","cholesterol",4,"PCN Code","PCN Code","PCN Code","[PCN Code]",TRUE
+"cholesterol","cholesterol",5,"PCN Name","PCN Name","PCN Name","[PCN Name]",TRUE
+"cholesterol","cholesterol",6,"Region1","Region1","Region","[Region]",TRUE
+"cholesterol","cholesterol",7,"Country1","Country1","Country","[Country]",TRUE
+"cholesterol","cholesterol",8,"P003CHOL (d)","P003CHOL (d)","P003CHOL (d)","[P003CHOL (d)]",TRUE
+"cholesterol","cholesterol",9,"P003CHOL (n)","P003CHOL (n)","P003CHOL (n)","[P003CHOL (n)]",TRUE
+"cholesterol","cholesterol",10,"P009CHOL (d)","P009CHOL (d)","P009CHOL (d)","[P009CHOL (d)]",TRUE
+"cholesterol","cholesterol",11,"P009CHOL (n)","P009CHOL (n)","P009CHOL (n)","[P009CHOL (n)]",TRUE
+"cholesterol","cholesterol",12,"P012CHOL (d)","P012CHOL (d)","P012CHOL (d)","[P012CHOL (d)]",TRUE
+"cholesterol","cholesterol",13,"P012CHOL (n)","P012CHOL (n)","P012CHOL (n)","[P012CHOL (n)]",TRUE
+"cholesterol","cholesterol",14,"CVDP003-ICB (d)","CVDP003-ICB (d)","CVDP003-ICB (d)","[CVDP003-ICB (d)]",TRUE
+"cholesterol","cholesterol",15,"CVDP003-ICB (n)","CVDP003-ICB (n)","CVDP003-ICB (n)","[CVDP003-ICB (n)]",TRUE
+"cholesterol","cholesterol",16,"High statins","High statins","High statins","[High statins]",TRUE
+"cholesterol","cholesterol",17,"Low and medium statins","Low and medium statins","Low and medium statins","[Low and medium statins]",TRUE
+"cholesterol","cholesterol",18,"Inclisiran","Inclisiran","Inclisiran","[Inclisiran]",TRUE
+"cholesterol","cholesterol",19,"List Size (EPACT2)","List Size (EPACT2)","List Size (EPACT2)","[List Size (EPACT2)]",TRUE
+"cholesterol","cholesterol",,"Total Statins","","","[Calculation_1738670982456643601]",FALSE
+"CKD","CKD",0,"Partner Organisation Code (CKD)","Partner Organisation Code","Partner Organisation Code","[Partner Organisation Code (CKD)]",TRUE
+"CKD","CKD",1,"General Practice (CKD)","General Practice (CKD)","Partner Name","[Partner Name (CKD)]",TRUE
+"CKD","CKD",2,"Practice Parent Sub ICB Loc Code (CKD)","Practice Parent Sub ICB Loc Code (CKD)","Practice Parent Sub ICB Loc Code","[Practice Parent Sub ICB Loc Code (CKD)]",TRUE
+"CKD","CKD",3,"Integrated Care Board (CKD)","Integrated Care Board (CKD)","Practice Parent Sub ICB Loc Name","[Practice Parent Sub ICB Loc Name (CKD)]",TRUE
+"CKD","CKD",4,"PCN Code (CKD)","PCN Code (CKD)","PCN Code","[PCN Code (CKD)]",TRUE
+"CKD","CKD",5,"PCN Name (CKD)","PCN Name (CKD)","PCN Name","[PCN Name (CKD)]",TRUE
+"CKD","CKD",6,"Region (CKD)","Region (CKD)","Region","[Region (CKD)]",TRUE
+"CKD","CKD",7,"Country (CKD)","Country (CKD)","Country","[Country (CKD)]",TRUE
+"CKD","CKD",8,"P002CKD (d)","P002CKD (d)","P002CKD (d)","[P002CKD (d)]",TRUE
+"CKD","CKD",9,"P002CKD (n)","P002CKD (n)","P002CKD (n)","[P002CKD (n)]",TRUE
+"CKD","CKD",10,"P003CKD (d)","P003CKD (d)","P003CKD (d)","[P003CKD (d)]",TRUE
+"CKD","CKD",11,"P003CKD (n)","P003CKD (n)","P003CKD (n)","[P003CKD (n)]",TRUE
+"CKD","CKD",12,"P004CKD (d)","P004CKD (d)","P004CKD (d)","[P004CKD (d)]",TRUE
+"CKD","CKD",13,"P004CKD (n)","P004CKD (n)","P004CKD (n)","[P004CKD (n)]",TRUE
+"CKD","CKD",14,"P005CKD (d)","P005CKD (d)","P005CKD (d)","[P005CKD (d)]",TRUE
+"CKD","CKD",15,"P005CKD (n)","P005CKD (n)","P005CKD (n)","[P005CKD (n)]",TRUE
+"CKD","CKD",16,"P006CKD (d)","P006CKD (d)","P006CKD (d)","[P006CKD (d)]",TRUE
+"CKD","CKD",17,"P006CKD (n)","P006CKD (n)","P006CKD (n)","[P006CKD (n)]",TRUE
+"CKD","CKD",18,"P007CKD (d)","P007CKD (d)","P007CKD (d)","[P007CKD (d)]",TRUE
+"CKD","CKD",19,"P007CKD (n)","P007CKD (n)","P007CKD (n)","[P007CKD (n)]",TRUE
+"CKD","CKD",20,"SGLT2i","SGLT2i","SGLT2i","[SGLT2i]",TRUE
+"CKD","CKD",21,"List Size (EPACT2) (CKD)","List Size (EPACT2) (CKD)","List Size (EPACT2)","[List Size (EPACT2) (CKD)]",TRUE
+"AF","AF",0,"Partner Organisation Code (AF)","Partner Organisation Code","Partner Organisation Code","[Partner Organisation Code (AF)]",TRUE
+"AF","AF",1,"Partner Name (AF)","Partner Name (AF)","Partner Name","[Partner Name (AF)]",TRUE
+"AF","AF",2,"ICB Loc Code (AF)","ICB Loc Code (AF)","Practice Parent Sub ICB Loc Code","[Practice Parent Sub ICB Loc Code (AF)]",TRUE
+"AF","AF",3,"ICB Loc Name (AF)","ICB Loc Name (AF)","Practice Parent Sub ICB Loc Name","[Practice Parent Sub ICB Loc Name (AF)]",TRUE
+"AF","AF",4,"PCN Code (AF)","PCN Code (AF)","PCN Code","[PCN Code (AF)]",TRUE
+"AF","AF",5,"PCN Name (AF)","PCN Name (AF)","PCN Name","[PCN Name (AF)]",TRUE
+"AF","AF",6,"Region (AF)","Region (AF)","Region","[Region (AF)]",TRUE
+"AF","AF",7,"Country (AF)","Country (AF)","Country","[Country (AF)]",TRUE
+"AF","AF",8,"AF Register (d)","AF Register (d)","AF Register (d)","[AF Register (d)]",TRUE
+"AF","AF",9,"AF Register (n)","AF Register (n)","AF Register (n)","[AF Register (n)]",TRUE
+"AF","AF",10,"AF006 (d)","AF006 (d)","AF006 (d)","[AF006 (d)]",TRUE
+"AF","AF",11,"AF006 (n)","AF006 (n)","AF006 (n)","[AF006 (n)]",TRUE
+"AF","AF",12,"AF008 (d)","AF008 (d)","AF008 (d)","[AF008 (d)]",TRUE
+"AF","AF",13,"AF008 (n)","AF008 (n)","AF008 (n)","[AF008 (n)]",TRUE
+"AF","AF",14,"CVDP001AF (d)","CVDP001AF (d)","CVDP001AF (d)","[CVDP001AF (d)]",TRUE
+"AF","AF",15,"CVDP001AF (n)","CVDP001AF (n)","CVDP001AF (n)","[CVDP001AF (n)]",TRUE
+"AF","AF",16,"CVDP002AF (d)","CVDP002AF (d)","CVDP002AF (d)","[CVDP002AF (d)]",TRUE
+"AF","AF",17,"CVDP002AF (n)","CVDP002AF (n)","CVDP002AF (n)","[CVDP002AF (n)]",TRUE
+"AF","AF",18,"List Size (AF)","List Size (AF)","List Size (AF)","[List Size (AF)]",TRUE
+"AF","AF",19,"AF Prevalence estimates (n)","AF Prevalence estimates (n)","Prevalence estimates (n)","[Prevalence estimates (n)]",TRUE
+"AF","AF",20,"AF Prevalence estimates (d)","AF Prevalence estimates (d)","Prevalence estimates (d)","[Prevalence estimates (d)]",TRUE
+"AF","AF",21,"Doac","Doac","DOAC","[DOAC]",TRUE
+"AF","AF",22,"Warfarin","Warfarin","Warfarin","[Warfarin]",TRUE
+"AF","AF",23,"Other","Other","other","[other]",TRUE
+"AF","AF",24,"Anti-arhythmics","Anti-arhythmics","Anti-arhythmics","[Anti-arhythmics]",TRUE
+"T2","T2",0,"Partner Organisation Code (T2)","Partner Organisation Code","Partner Organisation Code","[Partner Organisation Code (T2)]",TRUE
+"T2","T2",1,"Partner Name (T2)","Partner Name (T2)","Partner Name","[Partner Name (T2)]",TRUE
+"T2","T2",2,"Practice Parent Sub ICB Loc Code (T2)","Practice Parent Sub ICB Loc Code (T2)","Practice Parent Sub ICB Loc Code","[Practice Parent Sub ICB Loc Code (T2)]",TRUE
+"T2","T2",3,"Practice Parent Sub ICB Loc Name (T2)","Practice Parent Sub ICB Loc Name (T2)","Practice Parent Sub ICB Loc Name","[Practice Parent Sub ICB Loc Name (T2)]",TRUE
+"T2","T2",4,"PCN Code (T2)","PCN Code (T2)","PCN Code","[PCN Code (T2)]",TRUE
+"T2","T2",5,"PCN Name (T2)","PCN Name (T2)","PCN Name","[PCN Name (T2)]",TRUE
+"T2","T2",6,"South london (T2)","South london (T2)","South london","[South london (T2)]",TRUE
+"T2","T2",7,"England (T2)","England (T2)","England","[England (T2)]",TRUE
+"T2","T2",8,"T2 Prevalence (n)","T2 Prevalence (n)","T2 Prevalence (n)","[T2 Prevalence (n)]",TRUE
+"T2","T2",9,"T2 Prevalence (d)","T2 Prevalence (d)","T2 Prevalence (d)","[T2 Prevalence (d)]",TRUE
+"T2","T2",10,"8CP (n)","8CP (n)","8CP (n)","[8CP (n)]",TRUE
+"T2","T2",11,"8CP (d)","8CP (d)","8CP (d)","[8CP (d)]",TRUE
+"T2","T2",12,"TTHBA1C (n)","TTHBA1C (n)","TTHBA1C (n)","[TTHBA1C (n)]",TRUE
+"T2","T2",13,"TTHBA1C (d)","TTHBA1C (d)","TTHBA1C (d)","[TTHBA1C (d)]",TRUE
+"T2","T2",14,"TTBP (n)","TTBP (n)","TTBP (n)","[TTBP (n)]",TRUE
+"T2","T2",15,"TTBP (d)","TTBP (d)","TTBP (d)","[TTBP (d)]",TRUE
+"T2","T2",16,"TTStatin (n)","TTStatin (n)","TTStatin (n)","[TTStatin (n)]",TRUE
+"T2","T2",17,"TTStatin (d)","TTStatin (d)","TTStatin (d)","[TTStatin (d)]",TRUE
+"Heart Failure","Sheet2",0,"Partner Organisation Code (Sheet2)","Partner Organisation Code","Partner Organisation Code","[Partner Organisation Code (Sheet2)]",TRUE
+"Heart Failure","Sheet2",1,"Partner Name (Sheet2)","Partner Name (Sheet2)","Partner Name","[Partner Name (Sheet2)]",TRUE
+"Heart Failure","Sheet2",2,"Practice Parent Sub ICB Loc Code (Sheet2)","Practice Parent Sub ICB Loc Code (Sheet2)","Practice Parent Sub ICB Loc Code","[Practice Parent Sub ICB Loc Code (Sheet2)]",TRUE
+"Heart Failure","Sheet2",3,"ICB name HF","ICB name HF","Practice Parent Sub ICB Loc Name","[Practice Parent Sub ICB Loc Name (Sheet2)]",TRUE
+"Heart Failure","Sheet2",4,"PCN Code (Sheet2)","PCN Code (Sheet2)","PCN Code","[PCN Code (Sheet2)]",TRUE
+"Heart Failure","Sheet2",5,"PCN Name (Sheet2)","PCN Name (Sheet2)","PCN Name","[PCN Name (Sheet2)]",TRUE
+"Heart Failure","Sheet2",6,"South london","South london","South london","[South london]",TRUE
+"Heart Failure","Sheet2",7,"England (Sheet2)","England (Sheet2)","England","[England (Sheet2)]",TRUE
+"Heart Failure","Sheet2",8,"HF Prevalence (n)","HF Prevalence (n)","HF Prevalence (n)","[HF Prevalence (n)]",TRUE
+"Heart Failure","Sheet2",9,"HF Prevalence (d)","HF Prevalence (d)","HF Prevalence (d)","[HF Prevalence (d)]",TRUE
+"Heart Failure","Sheet2",10,"HF003 (n)","HF003 (n)","HF003 (n)","[HF003 (n)]",TRUE
+"Heart Failure","Sheet2",11,"HF003 (d)","HF003 (d)","HF003 (d)","[HF003 (d)]",TRUE
+"Heart Failure","Sheet2",12,"HF006 (n)","HF006 (n)","HF006 (n)","[HF006 (n)]",TRUE
+"Heart Failure","Sheet2",13,"HF006 (d)","HF006 (d)","HF006 (d)","[HF006 (d)]",TRUE
+"Heart Failure","Sheet2",14,"HF007 (n)","HF007 (n)","HF007 (n)","[HF007 (n)]",TRUE
+"Heart Failure","Sheet2",15,"HF007 (d)","HF007 (d)","HF007 (d)","[HF007 (d)]",TRUE
+"Heart Failure","Sheet2",16,"HF008 (n)","HF008 (n)","HF008 (n)","[HF008 (n)]",TRUE
+"Heart Failure","Sheet2",17,"HF008 (d)","HF008 (d)","HF008 (d)","[HF008 (d)]",TRUE
+"COPD","COPD",0,"Partner Organisation Code (COPD)","Partner Organisation Code","Partner Organisation Code","[Partner Organisation Code (COPD)]",TRUE
+"COPD","COPD",1,"Partner Name (COPD)","Partner Name (COPD)","Partner Name","[Partner Name (COPD)]",TRUE
+"COPD","COPD",2,"ICB Loc Code (COPD)","ICB Loc Code (COPD)","Practice Parent Sub ICB Loc Code","[Practice Parent Sub ICB Loc Code (COPD)]",TRUE
+"COPD","COPD",3,"ICB Loc Name (COPD)","ICB Loc Name (COPD)","Practice Parent Sub ICB Loc Name","[Practice Parent Sub ICB Loc Name (COPD)]",TRUE
+"COPD","COPD",4,"PCN Code (COPD)","PCN Code (COPD)","PCN Code","[PCN Code (COPD)]",TRUE
+"COPD","COPD",5,"PCN Name (COPD)","PCN Name (COPD)","PCN Name","[PCN Name (COPD)]",TRUE
+"COPD","COPD",6,"Region (COPD)","Region (COPD)","Region","[Region (COPD)]",TRUE
+"COPD","COPD",7,"Country (COPD)","Country (COPD)","Country","[Country (COPD)]",TRUE
+"COPD","COPD",8,"COPD010 (d)","COPD010 (d)","COPD010 (d)","[COPD010 (d)]",TRUE
+"COPD","COPD",9,"COPD010 (n)","COPD010 (n)","COPD010 (n)","[COPD010 (n)]",TRUE
+"COPD","COPD",10,"COPD014 (d)","COPD014 (d)","COPD014 (d)","[COPD014 (d)]",TRUE
+"COPD","COPD",11,"COPD014 (n)","COPD014 (n)","COPD014 (n)","[COPD014 (n)]",TRUE
+"COPD","COPD",12,"COPD Register (d)","COPD Register (d)","COPD Register (d)","[COPD Register (d)]",TRUE
+"COPD","COPD",13,"COPD Register (n)","COPD Register (n)","COPD Register (n)","[COPD Register (n)]",TRUE
+"SMI and obesity","Sheet21",0,"Partner Organisation Code (SMI)","Partner Organisation Code","Partner Organisation Code","[Partner Organisation Code (Sheet21)]",TRUE
+"SMI and obesity","Sheet21",1,"Partner Name (SMI)","Partner Name (SMI)","Partner Name","[Partner Name (Sheet21)]",TRUE
+"SMI and obesity","Sheet21",2,"ICB Loc Code (SMI)","ICB Loc Code (SMI)","Practice Parent Sub ICB Loc Code","[Practice Parent Sub ICB Loc Code (Sheet21)]",TRUE
+"SMI and obesity","Sheet21",3,"ICB Loc Name (SMI)","ICB Loc Name (SMI)","Practice Parent Sub ICB Loc Name","[Practice Parent Sub ICB Loc Name (Sheet21)]",TRUE
+"SMI and obesity","Sheet21",4,"PCN Code (SMI)","PCN Code (SMI)","PCN Code","[PCN Code (Sheet21)]",TRUE
+"SMI and obesity","Sheet21",5,"PCN Name (SMI)","PCN Name (SMI)","PCN Name","[PCN Name (Sheet21)]",TRUE
+"SMI and obesity","Sheet21",6,"South London (SMI)","South London (SMI)","South London","[South London (Sheet21)]",TRUE
+"SMI and obesity","Sheet21",7,"England (SMI)","England (SMI)","England","[England (Sheet21)]",TRUE
+"SMI and obesity","Sheet21",8,"Obesity Prevalence (N)","Obesity Prevalence (N)","obesity prevalence (n)","[obesity prevalence (n)]",TRUE
+"SMI and obesity","Sheet21",9,"Obesity Prevalence (D)","Obesity Prevalence (D)","obesity prevalence (d)","[obesity prevalence (d)]",TRUE
+"SMI and obesity","Sheet21",10,"GLP1 (n)","GLP1 (n)","GLP1 Ras (n)","[GLP1 Ras (n)]",TRUE
+"SMI and obesity","Sheet21",11,"GLP1 (d)","GLP1 (d)","GLP1 Ras (d)","[GLP1 Ras (d)]",TRUE
+"SMI and obesity","Sheet21",12,"SMI prevalence (n)","SMI prevalence (n)","SMI prevalence (n)","[SMI prevalence (n)]",TRUE
+"SMI and obesity","Sheet21",13,"SMI prevalence (d)","SMI prevalence (d)","SMI prevalence (d)","[SMI prevalence (d)]",TRUE
+"SMI and obesity","Sheet21",14,"Physical Health Checks (n)","Physical Health Checks (n)","Physical Health Checks (n)","[Physical Health Checks (n)]",TRUE
+"SMI and obesity","Sheet21",15,"Physical Health Checks (d)","Physical Health Checks (d)","Physical Health Checks (d)","[Physical Health Checks (d)]",TRUE
