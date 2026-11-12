@@ -3,7 +3,7 @@
 .RData
 .Ruserdata
 .Rproj.user/
-R/cache/*.rds
+R/cache/
 
 # Tableau temporary & recovery files
 Tableau/~*

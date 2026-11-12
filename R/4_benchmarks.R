@@ -42,10 +42,10 @@ append_benchmarks <- function(df, filename, baseline_dir, use_online = FALSE, ti
       synthetic[["CVDP007HYP  (n)"]] <- eng$numerator - sl_n
       synthetic[["CVDP007HYP  (d)"]] <- eng$denominator - sl_d
     } else if (filename == "cholesterol.csv") {
-      for (cd in c("CVDP003CHOL", "CVDP009CHOL", "CVDP012CHOL", "CVDP003FH")) {
+      for (cd in c("CVDP003CHOL", "CVDP009CHOL", "CVDP012CHOL")) {
         eng <- fetch_online_cvdprevent_national(cd, time_period_id)
-        col_n <- if (cd == "CVDP003FH") "CVDP003-ICB (n)" else sub("CVDP0*", "P0", paste0(cd, " (n)"))
-        col_d <- if (cd == "CVDP003FH") "CVDP003-ICB (d)" else sub("CVDP0*", "P0", paste0(cd, " (d)"))
+        col_n <- sub("CVDP0*", "P0", paste0(cd, " (n)"))
+        col_d <- sub("CVDP0*", "P0", paste0(cd, " (d)"))
         if (col_n %in% names(df) && col_d %in% names(df)) {
           sl_n <- sum(df[[col_n]], na.rm = TRUE)
           sl_d <- sum(df[[col_d]], na.rm = TRUE)
@@ -66,7 +66,7 @@ append_benchmarks <- function(df, filename, baseline_dir, use_online = FALSE, ti
         }
       }
     } else if (filename == "AF.csv") {
-      for (cd in c("CVDP001AF", "CVDP002AF")) {
+      for (cd in c("CVDP002AF")) {
         eng <- fetch_online_cvdprevent_national(cd, time_period_id)
         col_n <- paste0(cd, " (n)")
         col_d <- paste0(cd, " (d)")
@@ -75,9 +75,9 @@ append_benchmarks <- function(df, filename, baseline_dir, use_online = FALSE, ti
           sl_d <- sum(df[[col_d]], na.rm = TRUE)
           synthetic[[col_n]] <- eng$numerator - sl_n
           synthetic[[col_d]] <- eng$denominator - sl_d
+        }
       }
     }
-  }
 }
 
   # Update synthetic Outside Region labels (e.g. Outside London vs Outside South London)

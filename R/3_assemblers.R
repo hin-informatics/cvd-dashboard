@@ -90,7 +90,7 @@ assemble_cholesterol <- function(pm, raw_dir, use_online = FALSE, time_period_id
     c003 <- fetch_online_cvdprevent("CVDP003CHOL", time_period_id)
     c009 <- fetch_online_cvdprevent("CVDP009CHOL", time_period_id)
     c012 <- fetch_online_cvdprevent("CVDP012CHOL", time_period_id)
-    c_fh <- fetch_online_cvdprevent("CVDP003FH", time_period_id)
+    c_fh <- read_cvdp_icb(file.path(raw_dir, "CVD Genetically confirmed prevalence (CVDP003FH) - ICB level.xlsx"))
   } else {
     c003 <- read_cvdp(file.path(raw_dir, "Cholesterol QRISK = 20% treated with LLT (CVDP003CHOL) Sept 2024.xlsx"))
     c009 <- read_cvdp(file.path(raw_dir, "CVD treated with LLT (CVDP009CHOL) Sept 2024.xlsx"))
@@ -249,7 +249,7 @@ assemble_af <- function(pm, raw_dir, archive_dir, use_online = FALSE, time_perio
 
   # 3. CVDPREVENT Indicators
   if (isTRUE(use_online) && exists("fetch_online_cvdprevent", mode = "function")) {
-    af_p001 <- fetch_online_cvdprevent("CVDP001AF", time_period_id)
+    af_p001 <- read_cvdp_icb(file.path(raw_dir, "AF Prevalence (CVDP001AF) - ICB level.xlsx"))
     af_p002 <- fetch_online_cvdprevent("CVDP002AF", time_period_id)
   } else {
     af_p001 <- read_cvdp_icb(file.path(raw_dir, "AF Prevalence (CVDP001AF) - ICB level.xlsx"))
