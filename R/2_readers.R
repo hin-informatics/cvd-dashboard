@@ -88,7 +88,13 @@ read_epact2 <- function(file_path, sheet_name = NULL) {
 # Output: tibble(practice_code, list_size) coalescing ePACT2 list size with QOF list size
 read_list_size <- function(raw_dir) {
   ls_epact <- read_epact2(file.path(raw_dir, "list size report Nov 2024.xlsx"))
-  qof_hyp  <- suppressMessages(suppressWarnings(read_excel(file.path(raw_dir, "qof-2324-cvd practice level.xlsx"), sheet = "HYP", skip = 12, col_names = FALSE)))
+  
+  qof_cvd_file <- file.path(raw_dir, "qof-2425-cvd practice level.xlsx")
+  if (!file.exists(qof_cvd_file)) {
+    qof_cvd_file <- file.path(raw_dir, "qof-2324-cvd practice level.xlsx")
+  }
+  
+  qof_hyp  <- suppressMessages(suppressWarnings(read_excel(qof_cvd_file, sheet = "HYP", skip = 11, col_names = FALSE)))
   ls_qof   <- tibble(
     practice_code = as.character(qof_hyp[[6]]),
     qof_ls        = suppressWarnings(as.numeric(qof_hyp[[11]]))
@@ -109,7 +115,7 @@ read_qof_sheet <- function(file_path, sheet_name) {
   r11 <- unlist(raw_hdr[1, ])
   r12 <- unlist(raw_hdr[2, ])
   
-  data <- suppressWarnings(read_excel(file_path, sheet = sheet_name, skip = 12, col_names = FALSE))
+  data <- suppressWarnings(read_excel(file_path, sheet = sheet_name, skip = 11, col_names = FALSE))
   
   p_code    <- as.character(data[[6]])
   list_size <- suppressWarnings(as.numeric(data[[11]]))
@@ -127,8 +133,10 @@ read_qof_sheet <- function(file_path, sheet_name) {
     ind_name <- stringr::str_extract(r11[idx], "^[A-Z]{2,4}[0-9]{3}")
     num_col <- idx + 1
     den_col <- idx + 2
-    res[[paste0(ind_name, "_n")]] <- suppressWarnings(as.numeric(data[[num_col]]))
-    res[[paste0(ind_name, "_d")]] <- suppressWarnings(as.numeric(data[[den_col]]))
+    if (den_col <= ncol(data)) {
+      res[[paste0(ind_name, "_n")]] <- suppressWarnings(as.numeric(data[[num_col]]))
+      res[[paste0(ind_name, "_d")]] <- suppressWarnings(as.numeric(data[[den_col]]))
+    }
   }
   
   return(filter(res, !is.na(practice_code)))

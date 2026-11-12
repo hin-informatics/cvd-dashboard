@@ -38,4 +38,5 @@ OUTSIDE_REGION    <- if (isTRUE(EXPAND_TO_ALL_LONDON)) "Outside London" else "Ou
 
 # Online CVDPREVENT Data Extraction Settings
 USE_ONLINE_CVDPREVENT  <- TRUE
-CVDPREVENT_TIME_PERIOD <- 33  # 33 = To March 2026 (Latest), 28 = To Sept 2025, 20 = Sept 2024 (Baseline)
+CVDPREVENT_TIME_PERIOD <- 34  # 34 = To June 2026 (Latest), 33 = To March 2026, 20 = Sept 2024 (Baseline)
+QOF_FILE_PREFIX        <- "qof-2425"

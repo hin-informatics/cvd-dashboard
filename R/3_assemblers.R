@@ -16,7 +16,10 @@ suppressPackageStartupMessages({
 # 1. Hyper data (Hypertension)
 # ------------------------------------------------------------------------------
 assemble_hyper_data <- function(pm, raw_dir, use_online = FALSE, time_period_id = 20) {
-  qof_hyp_raw <- suppressWarnings(read_excel(file.path(raw_dir, "qof-2324-cvd practice level.xlsx"), sheet = "HYP", skip = 12, col_names = FALSE))
+  qof_cvd_file <- file.path(raw_dir, "qof-2425-cvd practice level.xlsx")
+  if (!file.exists(qof_cvd_file)) qof_cvd_file <- file.path(raw_dir, "qof-2324-cvd practice level.xlsx")
+
+  qof_hyp_raw <- suppressWarnings(read_excel(qof_cvd_file, sheet = "HYP", skip = 12, col_names = FALSE))
   qof_hyp <- tibble(
     practice_code = as.character(qof_hyp_raw[[6]]),
     hyp_reg_d     = suppressWarnings(as.numeric(qof_hyp_raw[[11]])),
@@ -25,9 +28,9 @@ assemble_hyper_data <- function(pm, raw_dir, use_online = FALSE, time_period_id 
     hyp008_d      = suppressWarnings(as.numeric(qof_hyp_raw[[37]])), # Denominator plus PCAs
     hyp009_n      = suppressWarnings(as.numeric(qof_hyp_raw[[40]])),
     hyp009_d      = suppressWarnings(as.numeric(qof_hyp_raw[[45]]))  # Denominator plus PCAs
-  )
-  
-  qof_bp <- read_qof_bp(file.path(raw_dir, "qof-2324-cvd practice level.xlsx"))
+  ) %>% filter(!is.na(practice_code), practice_code != "Practice code")
+
+  qof_bp <- read_qof_bp(qof_cvd_file)
   cvdp_hyp <- if (isTRUE(use_online) && exists("fetch_online_cvdprevent", mode = "function")) {
     fetch_online_cvdprevent("CVDP007HYP", time_period_id)
   } else {
@@ -206,7 +209,9 @@ assemble_ckd <- function(pm, raw_dir, use_online = FALSE, time_period_id = 20) {
 # ------------------------------------------------------------------------------
 assemble_af <- function(pm, raw_dir, archive_dir, use_online = FALSE, time_period_id = 20) {
   # 1. QOF AF indicators (6,271 England practices)
-  qof_file <- file.path(raw_dir, "qof-2324-cvd practice level.xlsx")
+  qof_file <- file.path(raw_dir, "qof-2425-cvd practice level.xlsx")
+  if (!file.exists(qof_file)) qof_file <- file.path(raw_dir, "qof-2324-cvd practice level.xlsx")
+
   qof_af_raw <- suppressWarnings(read_excel(qof_file, sheet = "AF", skip = 12, col_names = FALSE))
   qof_af <- tibble(
     practice_code = as.character(qof_af_raw[[6]]),
@@ -216,7 +221,7 @@ assemble_af <- function(pm, raw_dir, archive_dir, use_online = FALSE, time_perio
     af006_d       = suppressWarnings(as.numeric(qof_af_raw[[31]])),
     af008_n       = suppressWarnings(as.numeric(qof_af_raw[[38]])),
     af008_d       = suppressWarnings(as.numeric(qof_af_raw[[39]]))
-  ) %>% filter(!is.na(practice_code))
+  ) %>% filter(!is.na(practice_code), practice_code != "Practice code")
 
   # 2. Prescribing patient counts from EPACT2
   oral_file <- file.path(raw_dir, "EPACT2 Oral Anticoagulants Jan 2025.xlsx")
@@ -350,7 +355,10 @@ assemble_t2 <- function(pm, raw_dir, archive_dir) {
 # Output: tibble - 18-column Heart Failure fact table
 # ------------------------------------------------------------------------------
 assemble_heart_failure <- function(pm, raw_dir, archive_dir) {
-  qof_hf_raw <- suppressWarnings(read_excel(file.path(raw_dir, "qof-2324-cvd practice level.xlsx"), sheet = "HF", skip = 12, col_names = FALSE))
+  qof_file <- file.path(raw_dir, "qof-2425-cvd practice level.xlsx")
+  if (!file.exists(qof_file)) qof_file <- file.path(raw_dir, "qof-2324-cvd practice level.xlsx")
+
+  qof_hf_raw <- suppressWarnings(read_excel(qof_file, sheet = "HF", skip = 12, col_names = FALSE))
   qof_hf <- tibble(
     practice_code = as.character(qof_hf_raw[[6]]),
     hf_prev_d     = suppressWarnings(as.numeric(qof_hf_raw[[11]])),
@@ -363,7 +371,7 @@ assemble_heart_failure <- function(pm, raw_dir, archive_dir) {
     hf007_d       = suppressWarnings(as.numeric(qof_hf_raw[[51]])),
     hf008_n       = suppressWarnings(as.numeric(qof_hf_raw[[54]])),
     hf008_d       = suppressWarnings(as.numeric(qof_hf_raw[[59]]))
-  ) %>% filter(!is.na(practice_code))
+  ) %>% filter(!is.na(practice_code), practice_code != "Practice code")
 
   hf_file <- file.path(archive_dir, "Heart Failure combined dataset.xlsx")
   df_base <- suppressWarnings(read_excel(hf_file, sheet = "Sheet2"))
@@ -403,7 +411,9 @@ assemble_heart_failure <- function(pm, raw_dir, archive_dir) {
 # Output: tibble - 14-column COPD fact table
 # ------------------------------------------------------------------------------
 assemble_copd <- function(pm, raw_dir, archive_dir) {
-  resp_file <- file.path(raw_dir, "qof-2324-resp-practice level.xlsx")
+  resp_file <- file.path(raw_dir, "qof-2425-resp practice level.xlsx")
+  if (!file.exists(resp_file)) resp_file <- file.path(raw_dir, "qof-2324-resp-practice level.xlsx")
+
   qof_copd_raw <- suppressWarnings(read_excel(resp_file, sheet = "COPD", skip = 12, col_names = FALSE))
   qof_copd <- tibble(
     practice_code = as.character(qof_copd_raw[[6]]),
@@ -413,7 +423,7 @@ assemble_copd <- function(pm, raw_dir, archive_dir) {
     copd010_d     = suppressWarnings(as.numeric(qof_copd_raw[[31]])),
     copd014_n     = suppressWarnings(as.numeric(qof_copd_raw[[38]])),
     copd014_d     = suppressWarnings(as.numeric(qof_copd_raw[[39]]))
-  ) %>% filter(!is.na(practice_code))
+  ) %>% filter(!is.na(practice_code), practice_code != "Practice code")
 
   copd_file <- file.path(archive_dir, "COPD combined dataset.xlsx")
   df_base <- suppressWarnings(read_excel(copd_file, sheet = "COPD"))
@@ -450,11 +460,40 @@ assemble_copd <- function(pm, raw_dir, archive_dir) {
 # ------------------------------------------------------------------------------
 assemble_smi_obesity <- function(pm, baseline_dir, raw_dir = NULL) {
   base_file <- file.path(baseline_dir, "SMI and obesity.csv")
-  df_base <- suppressWarnings(read_csv(base_file, show_col_types = FALSE)) %>%
-    filter(!is.na(`Partner Organisation Code (SMI)`))
+  df_base <- if (file.exists(base_file)) {
+    suppressWarnings(read_csv(base_file, show_col_types = FALSE)) %>%
+      filter(!is.na(`Partner Organisation Code (SMI)`))
+  } else {
+    tibble()
+  }
 
+  smi_df <- tibble(practice_code = character())
+  ob_df  <- tibble(practice_code = character())
   glp1_epact <- tibble(practice_code = character(), glp1_pat = numeric())
+
   if (!is.null(raw_dir)) {
+    smi_file <- file.path(raw_dir, "qof-2425-smi practice level.xlsx")
+    if (file.exists(smi_file)) {
+      smi_raw <- suppressWarnings(read_excel(smi_file, sheet = "MH", skip = 12, col_names = FALSE))
+      smi_df <- tibble(
+        practice_code = as.character(smi_raw[[6]]),
+        smi_prev_d   = suppressWarnings(as.numeric(smi_raw[[11]])),
+        smi_prev_n   = suppressWarnings(as.numeric(smi_raw[[12]])),
+        mh002_n      = suppressWarnings(as.numeric(smi_raw[[30]])),
+        mh002_d      = suppressWarnings(as.numeric(smi_raw[[31]]))
+      ) %>% filter(!is.na(practice_code), practice_code != "Practice code")
+    }
+
+    ob_dia_file <- file.path(raw_dir, "qof-2425-dia practice level.xlsx")
+    if (file.exists(ob_dia_file)) {
+      ob_raw <- suppressWarnings(read_excel(ob_dia_file, sheet = "OB", skip = 12, col_names = FALSE))
+      ob_df <- tibble(
+        practice_code = as.character(ob_raw[[6]]),
+        ob_prev_d    = suppressWarnings(as.numeric(ob_raw[[11]])),
+        ob_prev_n    = suppressWarnings(as.numeric(ob_raw[[12]]))
+      ) %>% filter(!is.na(practice_code), practice_code != "Practice code")
+    }
+
     ob_file <- file.path(raw_dir, "EPACT2 Obesity drugs - Jan 2025.xlsx")
     if (file.exists(ob_file)) {
       df_ob <- suppressWarnings(read_excel(ob_file, sheet = "Data"))
@@ -467,8 +506,19 @@ assemble_smi_obesity <- function(pm, baseline_dir, raw_dir = NULL) {
   }
 
   df <- pm %>%
-    left_join(df_base, by = c("practice_code" = "Partner Organisation Code (SMI)")) %>%
-    left_join(glp1_epact, by = "practice_code") %>%
+    left_join(smi_df, by = "practice_code") %>%
+    left_join(ob_df, by = "practice_code") %>%
+    left_join(glp1_epact, by = "practice_code")
+
+  if (nrow(df_base) > 0) {
+    df <- df %>% left_join(df_base, by = c("practice_code" = "Partner Organisation Code (SMI)"))
+  }
+
+  get_col <- function(col_name) {
+    if (col_name %in% names(df)) df[[col_name]] else rep(NA_real_, nrow(df))
+  }
+
+  out <- df %>%
     transmute(
       `England (SMI)`                  = country,
       `ICB Loc Code (SMI)`             = sub_icb_code,
@@ -478,14 +528,14 @@ assemble_smi_obesity <- function(pm, baseline_dir, raw_dir = NULL) {
       `PCN Code (SMI)`                 = pcn_code,
       `PCN Name (SMI)`                 = pcn_name,
       `South London (SMI)`             = region,
-      `GLP1 (d)`                       = `GLP1 (d)`,
-      `GLP1 (n)`                       = coalesce(`GLP1 (n)`, glp1_pat, 0),
-      `Obesity Prevalence (D)`         = `Obesity Prevalence (D)`,
-      `Obesity Prevalence (N)`         = `Obesity Prevalence (N)`,
-      `Physical Health Checks (d)`     = `Physical Health Checks (d)`,
-      `Physical Health Checks (n)`     = `Physical Health Checks (n)`,
-      `SMI prevalence (d)`             = `SMI prevalence (d)`,
-      `SMI prevalence (n)`             = `SMI prevalence (n)`
+      `GLP1 (d)`                       = coalesce(ob_prev_n, get_col("GLP1 (d)")),
+      `GLP1 (n)`                       = coalesce(glp1_pat, get_col("GLP1 (n)"), 0),
+      `Obesity Prevalence (D)`         = coalesce(ob_prev_d, get_col("Obesity Prevalence (D)")),
+      `Obesity Prevalence (N)`         = coalesce(ob_prev_n, get_col("Obesity Prevalence (N)")),
+      `Physical Health Checks (d)`     = coalesce(mh002_d, get_col("Physical Health Checks (d)")),
+      `Physical Health Checks (n)`     = coalesce(mh002_n, get_col("Physical Health Checks (n)")),
+      `SMI prevalence (d)`             = coalesce(smi_prev_d, get_col("SMI prevalence (d)")),
+      `SMI prevalence (n)`             = coalesce(smi_prev_n, get_col("SMI prevalence (n)"))
     )
-  return(df)
+  return(out)
 }
