@@ -88,6 +88,13 @@ append_benchmarks <- function(df, filename, baseline_dir, use_online = FALSE, ti
     }
   }
 
+  # Label benchmark practice names so Tableau filter never displays "Null"
+  benchmark_practice_label <- "London / England Benchmark"
+  gp_cols <- grep("Practice|Partner Name", names(synthetic), value = TRUE)
+  for (col in gp_cols) {
+    synthetic[[col]][is.na(synthetic[[col]]) | synthetic[[col]] == "" | synthetic[[col]] == outside_lbl] <- benchmark_practice_label
+  }
+
   # Bind synthetic benchmark rows at the end
   out <- bind_rows(df, synthetic)
   return(out)
